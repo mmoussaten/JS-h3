@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html{
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+        }
+
+        body {
+            font-family: 'Copse','serif';
+            text-align:center;
+        }
+        img{
+            border: black 1px;
+            height: 300px;
+            width: 300px;
+            border: 0px;
+        }
+        #pics{
+            width: 900px;
+            height: 900px;
+            font-size: 0px;
+            margin: auto;
+            font-size: 0px;
+
+
+        }
+
+    </style>
+</head>
+<body>
+<h1> Monkey shuffle</h1>
+<div id="pics">
+
+    <img src="image/aap1.jpg" >
+    <img src="image/aap2.jpg" >
+    <img src="image/aap3.jpg" >
+    <img src="image/aap4.jpg" >
+    <img src="image/aap5.jpg" >
+    <img src="image/aap6.jpg" >
+    <img src="image/aap7.jpg" >
+    <img src="image/aap8.jpg" >
+    <img src="image/aap9.jpg" >
+</div>
+<script>
+var plaatjes = document.getElementsByTagName("image");
+var random = 0;
+
+var randomNumbers =[];
+
+while(randomNumbers.length < 9) {
+    random = Math.floor(Math.random()*9) + 1;
+    if (randomNumbers.lastIndexOf(random) == -1){
+         randomNumbers.push(random);
+    }
+}
+random = 0;
+for (var plaatje in plaatjes) {
+    plaatjes[plaatje].src = "image/aap" + randomNumbers[random] + ".jpg";
+    random++;
+}
+
+</script>
+</body>
+</html>

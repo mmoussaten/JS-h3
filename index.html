@@ -14,7 +14,7 @@
             text-align:center;
         }
         img{
-            border: black 1px;
+
             height: 300px;
             width: 300px;
             border: 0px;
@@ -22,6 +22,7 @@
         #pics{
             width: 900px;
             height: 900px;
+            border: black 1px;
             font-size: 0px;
             margin: auto;
             font-size: 0px;
@@ -46,10 +47,10 @@
     <img src="image/aap9.jpg" >
 </div>
 <script>
-var plaatjes = document.getElementsByTagName("image");
+var plaatjes = document.getElementsByTagName("img");
 var random = 0;
 
-var randomNumbers =[];
+var randomNumbers = [];
 
 while(randomNumbers.length < 9) {
     random = Math.floor(Math.random()*9) + 1;
